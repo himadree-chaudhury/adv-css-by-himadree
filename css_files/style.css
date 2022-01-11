@@ -13,7 +13,7 @@ Dark green: #28b485
   padding: 0;
   box-sizing: inherit;
 }
-html{
+html {
   font-size: 62.5%;
 }
 body {
@@ -30,42 +30,44 @@ body {
       rgba(126, 213, 111, 0.8),
       rgba(40, 180, 133, 0.8)
     ),
-    url(resources/hero.jpg);
+    url(../resources/hero.jpg);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   background-size: cover;
   background-position: top;
   position: relative;
 }
-.logo_box {
+.header__logo-box {
   position: absolute;
   top: 4rem;
   left: 4rem;
 }
-.logo {
+.header__logo-box__logo {
   height: 3.5rem;
 }
-.welcome_box {
+.header__welcomebox {
   position: absolute;
   left: 50%;
   top: 40%;
   transform: translate(-50%, -50%);
   text-align: center;
 }
-.heading_primary {
+.heading-primary {
   color: #fff;
   text-transform: uppercase;
   backface-visibility: hidden;
   margin-bottom: 4rem;
   line-height: 1;
+  text-align: justify;
+  line-height: 2;
 }
-.heading_primary_main {
+.heading-primary--main {
   display: block;
   font-size: 6rem;
   font-weight: 400;
   letter-spacing: 3.5rem;
   animation: moveInLeft 1s ease-out;
 }
-.heading_primary_sub {
+.heading-primary--sub {
   display: block;
   font-size: 2rem;
   font-weight: 400;
@@ -110,17 +112,18 @@ body {
   font-size: 1.6rem;
 }
 .btn:hover {
-  transform: translateY(-.3rem);
+  transform: translateY(-0.3rem);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 .btn:active {
-  transform: translateY(-.1rem);
-  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
-.btn_white {
+.btn--white {
   background-color: #fff;
   color: #777;
-  animation: moveInBottom 1s ease-out;
+  animation: moveInBottom .5s ease-out;
+  /* .btn_animated{} */
   animation-delay: 0.75s;
   animation-fill-mode: backwards;
 }
@@ -136,7 +139,7 @@ body {
   border-radius: 10rem;
   transition: all 0.1s;
 }
-.btn_white::after {
+.btn--white::after {
   background-color: #fff;
 }
 .btn:hover::after {
